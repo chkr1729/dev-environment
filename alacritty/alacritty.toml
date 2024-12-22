@@ -23,3 +23,7 @@ import = [
     "~/.config/alacritty/themes/themes/coolnight.toml"
 ]
 
+[selection]
+# Automatically copy text to clipboard on selection.
+save_to_clipboard = true
+
