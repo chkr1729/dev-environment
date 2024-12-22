@@ -1,0 +1,36 @@
+# General Zsh Aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias cd..='cd ..'
+
+# Git Plugin Aliases
+alias gst='git status'
+alias gco='git checkout'
+alias gcm='git commit -m'
+alias gaa='git add --all'
+alias gp='git push'
+alias gl='git pull'
+alias glog='git log --oneline --decorate --graph --all'
+alias gss='git stash save'
+alias gpop='git stash pop'
+
+# System Management Aliases
+alias update='sudo apt update && sudo apt upgrade'
+alias zshconfig='nano ~/.zshrc'
+alias ohmyzsh='cd ~/.oh-my-zsh'
+
+# Networking Aliases
+alias ping='ping -c 5'
+alias ports='netstat -tulanp'
+
+# Python Plugin Aliases
+alias pyclean='find . -name "*.pyc" -delete && find . -name "__pycache__" -delete'
+alias py='python3'
+
+alias c='clear'
+
