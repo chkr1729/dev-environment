@@ -21,10 +21,14 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         -- Add clang-format for C and C++
+        c = { "clang_format" },
+        cpp = { "clang_format" },
+        objc = { "clang_format" },
+        objcpp = { "clang_format" },
       },
       format_on_save = {
         lsp_fallback = true,
-       async = false,
+        async = false,
         timeout_ms = 1000,
       },
     })
