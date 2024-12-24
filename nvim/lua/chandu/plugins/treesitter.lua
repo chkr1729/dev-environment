@@ -41,6 +41,7 @@ return {
         "gitignore",
         "query",
         "vimdoc",
+        "clangd",
         "c",
       },
       -- Automatically install missing parsers when opening files
