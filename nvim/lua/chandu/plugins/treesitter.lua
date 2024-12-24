@@ -41,11 +41,20 @@ return {
         "gitignore",
         "query",
         "vimdoc",
-        "clangd",
         "c",
+        "cpp",
       },
       -- Automatically install missing parsers when opening files
       auto_install = true,
+
+      -- Install parsers asynchronously
+      sync_install = false,
+
+      ignore_install = { -- Parsers to ignore during installation
+        "haskell", -- Example of a parser to ignore
+      },
+
+      modules = {}, -- Add this field even if empty (required)
 
       incremental_selection = {
         enable = true,
