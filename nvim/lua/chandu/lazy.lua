@@ -20,4 +20,3 @@ require("lazy").setup({ { import = "chandu.plugins" }, { import = "chandu.plugin
     notify = false,
   },
 })
-
