@@ -38,6 +38,8 @@ return {
         "pyright",
         "clangd",
       },
+      -- Automatically install configured servers (ensure_installed)
+      automatic_installation = true,
     })
 
     mason_tool_installer.setup({
