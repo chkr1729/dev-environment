@@ -36,3 +36,5 @@ alias cd="z"
 
 source ~/.zsh_aliases
 
+# --- setting vi motions -----
+set -o vi
