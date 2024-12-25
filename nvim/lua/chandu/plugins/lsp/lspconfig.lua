@@ -95,6 +95,8 @@ return {
               diagnostics = {
                 globals = { "vim" },
               },
+              -- Disable specific diagnostics
+              disable = { "missing-fields", "redundant-parameters" },
               completion = {
                 callSnippet = "Replace",
               },
