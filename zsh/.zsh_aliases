@@ -1,10 +1,11 @@
 # ---- Eza (better ls) -----
-# alias ls="eza --icons=always"
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --icons=always --no-user --no-permissions"
+# alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # General Zsh Aliases
 alias ll='ls -alF'
 alias la='ls -A'
+alias ld='ls -d .*'
 alias cd='z'
 alias ..='cd ..'
 alias ...='cd ../..'
