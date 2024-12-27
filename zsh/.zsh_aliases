@@ -39,4 +39,4 @@ alias pyclean='find . -name "*.pyc" -delete && find . -name "__pycache__" -delet
 alias py='python3'
 
 alias c='clear'
-
+alias sz='source ~/.zshrc'
