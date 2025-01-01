@@ -1,4 +1,6 @@
+-- General Settings
 vim.cmd("let g:netrw_liststyle = 3")
+vim.g.python3_host_prog = "~/.venvs/clang-tools/bin/python"
 
 local opt = vim.opt -- for conciseness
 
