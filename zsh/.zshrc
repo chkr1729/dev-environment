@@ -85,6 +85,9 @@ _fzf_comprun() {
 # ----- Bat (better cat) -----
 export BAT_THEME=tokyonight_night
 
+export PATH="/Users/Chandu/vcpkg:$PATH"
+
+
 # --- Sourcing some files ----
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
