@@ -30,11 +30,11 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "svelte",
+        --"svelte",
         "lua_ls",
-        "graphql",
-        "emmet_ls",
-        "prismals",
+        --"graphql",
+        --"emmet_ls",
+        --"prismals",
         "pyright",
         "clangd",
       },
@@ -50,6 +50,7 @@ return {
         "black", -- python formatter
         "pylint", -- python linter
         "eslint_d", -- js linter
+        "clang-format",
       },
     })
   end,
