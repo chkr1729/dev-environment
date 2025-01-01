@@ -14,6 +14,10 @@ return {
       highlight = {
         enable = true,
       },
+      -- enable folding
+      fold = {
+        enable = true,
+      },
       -- enable indentation
       indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
@@ -23,17 +27,17 @@ return {
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
-        "javascript",
-        "typescript",
-        "tsx",
-        "yaml",
+        --"javascript",
+        --"typescript",
+        --"tsx",
+        --"yaml",
         "html",
         "css",
-        "prisma",
+        --"prisma",
         "markdown",
         "markdown_inline",
-        "svelte",
-        "graphql",
+        --"svelte",
+        --"graphql",
         "bash",
         "lua",
         "vim",
@@ -66,5 +70,10 @@ return {
         },
       },
     })
+    -- Global folding settings
+    vim.opt.foldmethod = "expr" -- Use expression-based folding
+    vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Use Tree-sitter folding expression
+    vim.opt.foldenable = true -- Enable folding by default
+    vim.opt.foldlevel = 99 -- Keep all folds open initially
   end,
 }
