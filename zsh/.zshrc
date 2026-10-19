@@ -5,18 +5,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
 setopt share_history
+setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
 setopt hist_verify
 
 # completion using arrow keys (based on history)
@@ -84,13 +88,39 @@ _fzf_comprun() {
 
 # ----- Bat (better cat) -----
 export BAT_THEME=tokyonight_night
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# ----- fzf-tab (menu-style tab completion) -----
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/fzf-tab/fzf-tab.zsh
+
+# ----- direnv (per-project env vars) -----
+eval "$(direnv hook zsh)"
 
 export PATH="/Users/Chandu/vcpkg:$PATH"
 
 
 # --- Sourcing some files ----
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh_aliases
 source ~/fzf-git.sh/fzf-git.sh
 
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# ARM-native Miniforge
+__conda_setup="$('/opt/homebrew/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# npm global path
+export PATH="/Users/Chandu/.npm-global/bin:$PATH"
+
+# opencode
+export PATH=/Users/Chandu/.opencode/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
