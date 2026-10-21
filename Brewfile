@@ -1,7 +1,4 @@
-tap "1password/tap"
 tap "codecrafters-io/tap"
-tap "jesseduffield/lazygit"
-tap "koekeishiya/formulae"
 brew "autoconf"
 brew "automake"
 brew "bash"
