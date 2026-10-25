@@ -20,5 +20,5 @@ Ordered by risk: safe, reversible changes first; uninstalls and sudo steps later
 - [x] **7. Terminal consolidation** (done 2026-10-25: iTerm2 kept) — keep iTerm2 (or trial Ghostty); remove kitty/WezTerm/Alacritty.
 - [x] **8. Apps & Homebrew** (done 2026-10-25: OrbStack, brew upgrade, casks adopted) — OrbStack instead of Docker Desktop, Preview instead of Adobe Reader,
       `brew upgrade`, move manually installed apps to casks, `brew bundle dump` into Brewfile.
-- [ ] **9. Shell (optional)** — uv instead of pyenv/pipenv, atuin, lazy-load pyenv/conda.
+- [x] **9. Shell** (done 2026-10-25: startup 0.35s → 0.09s; conda lazy-loaded, pyenv --no-rehash, atuin on Ctrl-R, uv installed)
 - [x] **10. Commit dotfiles** (done 2026-10-25) — including the pending nvim/alacritty changes.

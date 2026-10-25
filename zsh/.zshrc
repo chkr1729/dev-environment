@@ -105,17 +105,18 @@ source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-syntax-highlighting/zsh-synta
 source ~/.zsh_aliases
 source ~/fzf-git.sh/fzf-git.sh
 
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# --no-rehash: skip rebuilding shims on every shell (pyenv rehashes after installs anyway)
+eval "$(pyenv init - --no-rehash zsh)"
 
-# >>> conda initialize >>>
-# ARM-native Miniforge
-__conda_setup="$('/opt/homebrew/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# ARM-native Miniforge, loaded on first `conda` call (base isn't auto-activated, saves ~130 ms per shell)
+conda() {
+  unfunction conda
+  eval "$('/opt/homebrew/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  conda "$@"
+}
+
+# ----- Atuin (searchable shell history on Ctrl-R; Up arrow keeps prefix search) -----
+eval "$(atuin init zsh --disable-up-arrow)"
 
 
 # npm global path
