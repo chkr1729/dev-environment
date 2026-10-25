@@ -40,6 +40,8 @@ alias py='python3'
 
 alias c='clear'
 alias sz='source ~/.zshrc'
+alias vim='nvim'
+alias del='trash'   # recoverable delete; prefer over rm -r
 
 # GitHub CLI
 alias prs='gh pr list --author @me'
