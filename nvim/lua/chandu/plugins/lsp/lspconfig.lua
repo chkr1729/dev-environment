@@ -85,6 +85,18 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["pyright"] = function()
+        lspconfig.pyright.setup({
+          capabilities = capabilities,
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "off", -- Use "basic" or "off" for more relaxed checks.
+              },
+            },
+          },
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({

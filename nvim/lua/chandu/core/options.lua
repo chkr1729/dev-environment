@@ -16,6 +16,8 @@ opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
+opt.sidescroll = 1 -- scroll horizontally one column at a time (smooth)
+opt.sidescrolloff = 5 -- keep 5 cols of context visible to the side of the cursor
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
