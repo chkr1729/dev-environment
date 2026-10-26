@@ -96,14 +96,12 @@ source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/fzf-tab/fzf-tab.zsh
 # ----- direnv (per-project env vars) -----
 eval "$(direnv hook zsh)"
 
-export PATH="/Users/Chandu/vcpkg:$PATH"
-
 
 # --- Sourcing some files ----
 source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh_aliases
-source ~/fzf-git.sh/fzf-git.sh
+source ~/.local/share/fzf-git.sh/fzf-git.sh
 
 # --no-rehash: skip rebuilding shims on every shell (pyenv rehashes after installs anyway)
 eval "$(pyenv init - --no-rehash zsh)"
