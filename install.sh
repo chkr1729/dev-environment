@@ -7,8 +7,6 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "Repo: $REPO"
 
-# Initialize submodules (alacritty themes)
-git -C "$REPO" submodule update --init --recursive
 
 # Symlink helper: link <target-in-repo> <home-path>
 link() {
@@ -43,7 +41,6 @@ link "$REPO/tmux/tmux.conf"    "$HOME/.tmux.conf"
 
 # XDG configs
 link "$REPO/nvim"              "$HOME/.config/nvim"
-link "$REPO/alacritty"         "$HOME/.config/alacritty"
 
 # Claude Code (user-level config; runtime state stays in ~/.claude)
 link "$REPO/claude/settings.json"         "$HOME/.claude/settings.json"

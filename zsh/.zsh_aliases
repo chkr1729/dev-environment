@@ -47,3 +47,4 @@ alias del='trash'   # recoverable delete; prefer over rm -r
 alias prs='gh pr list --author @me'
 alias prv='gh pr view --web'
 alias prc='gh pr create --web'
+alias ec2='ssh nse-ec2 -t "tmux -CC new -A -s main"'   # iTerm-native tmux on EC2; survives disconnects

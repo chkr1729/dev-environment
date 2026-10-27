@@ -123,3 +123,6 @@ export PATH="/Users/Chandu/.npm-global/bin:$PATH"
 # opencode
 export PATH=/Users/Chandu/.opencode/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+# iTerm2 shell integration: prompt marks, cwd/host reporting, imgcat/it2dl utilities
+[[ "$TERM_PROGRAM" == "iTerm.app" && -r ~/dev-environment/iterm2/shell_integration.zsh ]] && source ~/dev-environment/iterm2/shell_integration.zsh

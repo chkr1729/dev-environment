@@ -1686,7 +1686,7 @@
   #               typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
   # Emit OSC 133 prompt marks so iTerm2 can jump between commands (⌘⇧↑/↓) and select output (⌘⇧A).
-  typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
+  typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=false  # iTerm2 shell integration emits marks instead
 
   # Instant prompt mode.
   #
