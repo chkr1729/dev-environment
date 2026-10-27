@@ -1685,6 +1685,8 @@
   #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
   #               typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
+  # Emit OSC 133 prompt marks so iTerm2 can jump between commands (⌘⇧↑/↓) and select output (⌘⇧A).
+  typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
 
   # Instant prompt mode.
   #

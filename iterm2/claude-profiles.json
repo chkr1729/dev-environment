@@ -542,7 +542,18 @@
         "Blue Component": 0.9607843137254902,
         "Alpha Component": 1,
         "Color Space": "sRGB"
-      }
+      },
+      "Prompt Before Closing 2": 2,
+      "Jobs to Ignore": [
+        "rlogin",
+        "ssh",
+        "slogin",
+        "telnet",
+        "zsh",
+        "bash",
+        "-zsh",
+        "login"
+      ]
     },
     {
       "Name": "Claude Hotkey",
