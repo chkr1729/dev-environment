@@ -26,3 +26,12 @@
 [user]
 	name = Chandrasekhar Karnam
 	email = karnam1729@gmail.com
+	signingkey = /Users/Chandu/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/Chandu/.config/git/allowed_signers
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
