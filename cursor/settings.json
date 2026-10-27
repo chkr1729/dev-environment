@@ -1,0 +1,46 @@
+{
+    // Window / theme: follow macOS light/dark, matching iTerm2's Catppuccin profiles
+    "window.commandCenter": true,
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
+
+    // Fonts: same as iTerm2
+    "editor.fontFamily": "'MesloLGS Nerd Font Mono', Menlo, monospace",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 1.5,
+    "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
+    "terminal.integrated.fontSize": 14,
+
+    // Editing
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "onFocusChange",
+    "git.autofetch": true,
+
+    // Python: ruff formats, fixes and sorts imports on save
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "notebook.formatOnSave.enabled": true,
+
+    // C++: clangd (cpptools is blocked in Cursor); needs compile_commands.json from CMake
+    "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
+    "[c]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
+    "clangd.arguments": ["--background-index", "--clang-tidy", "--header-insertion=never"],
+    "cmake.configureSettings": { "CMAKE_EXPORT_COMPILE_COMMANDS": "ON" },
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+
+    // Claude Code extension
+    "claudeCode.preferredLocation": "panel"
+}

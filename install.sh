@@ -50,6 +50,10 @@ for skill in "$REPO"/claude/skills/*/; do
   link "${skill%/}" "$HOME/.claude/skills/$(basename "$skill")"
 done
 
+# Cursor
+link "$REPO/cursor/settings.json"    "$HOME/Library/Application Support/Cursor/User/settings.json"
+link "$REPO/cursor/keybindings.json" "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+
 # iTerm2 dynamic profiles (Claude + Claude Hotkey)
 link "$REPO/iterm2/claude-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/claude-profiles.json"
 
