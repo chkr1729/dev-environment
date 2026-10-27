@@ -45,6 +45,9 @@ link "$REPO/tmux/tmux.conf"    "$HOME/.tmux.conf"
 link "$REPO/nvim"              "$HOME/.config/nvim"
 link "$REPO/alacritty"         "$HOME/.config/alacritty"
 
+# iTerm2 dynamic profiles (Claude + Claude Hotkey)
+link "$REPO/iterm2/claude-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/claude-profiles.json"
+
 # Optional: restore Brew packages (run manually if you want this)
 if [ "${INSTALL_BREW:-0}" = "1" ] && [ -f "$REPO/Brewfile" ]; then
   brew bundle --file="$REPO/Brewfile"

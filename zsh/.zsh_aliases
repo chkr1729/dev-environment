@@ -47,20 +47,3 @@ alias del='trash'   # recoverable delete; prefer over rm -r
 alias prs='gh pr list --author @me'
 alias prv='gh pr view --web'
 alias prc='gh pr create --web'
-
-# ---- Alacritty day/night theme switcher ----
-# Swaps the imported theme + opacity in alacritty.toml; Alacritty live-reloads instantly.
-#   theme light  → Catppuccin Latte (bright day)
-#   theme dark   → Catppuccin Macchiato (soft night)
-theme() {
-  local cfg="$HOME/.config/alacritty/alacritty.toml"
-  local name opacity
-  case "$1" in
-    light|day)  name="catppuccin_latte";     opacity="0.95" ;;
-    dark|night) name="catppuccin_macchiato";  opacity="0.85" ;;
-    *) echo "usage: theme {light|dark}"; return 1 ;;
-  esac
-  sed -i '' -E "s#themes/themes/[A-Za-z0-9_]+\.toml#themes/themes/${name}.toml#" "$cfg"
-  sed -i '' -E "s#^opacity = .*#opacity = ${opacity}#" "$cfg"
-  echo "Alacritty → ${name} (opacity ${opacity})"
-}
