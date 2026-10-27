@@ -45,6 +45,14 @@ link "$REPO/tmux/tmux.conf"    "$HOME/.tmux.conf"
 link "$REPO/nvim"              "$HOME/.config/nvim"
 link "$REPO/alacritty"         "$HOME/.config/alacritty"
 
+# Claude Code (user-level config; runtime state stays in ~/.claude)
+link "$REPO/claude/settings.json"         "$HOME/.claude/settings.json"
+link "$REPO/claude/CLAUDE.md"             "$HOME/.claude/CLAUDE.md"
+link "$REPO/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
+for skill in "$REPO"/claude/skills/*/; do
+  link "${skill%/}" "$HOME/.claude/skills/$(basename "$skill")"
+done
+
 # iTerm2 dynamic profiles (Claude + Claude Hotkey)
 link "$REPO/iterm2/claude-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/claude-profiles.json"
 
