@@ -18,5 +18,9 @@
 ## Git
 - Don't add Claude/AI attribution (Co-Authored-By, "Generated with Claude Code") to commits, PR descriptions or code comments in my repos.
 
-## Background
-- Strong in equity/NSE options and quant finance. Explain crypto-native concepts (perps, funding, inverse contracts) by analogy to equity options.
+## Documentation
+- Keep documentation concise and structured.
+- Avoid duplicating information across files.
+- Prefer linking to existing documentation.
+- Update durable documentation when behavior changes.
+- Do not append session histories to instruction files.
