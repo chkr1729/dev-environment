@@ -18,9 +18,30 @@
 ## Git
 - Don't add Claude/AI attribution (Co-Authored-By, "Generated with Claude Code") to commits, PR descriptions or code comments in my repos.
 
+## Verification
+- Never claim a test passed unless it was actually run.
+- Run relevant tests after code changes; report failures clearly.
+- Add regression tests for bug fixes.
+- For nontrivial changes, verify correctness before declaring completion.
+- Benchmark before and after performance optimizations.
+- Distinguish implemented, tested, and verified.
+
 ## Documentation
 - Keep documentation concise and structured.
 - Avoid duplicating information across files.
 - Prefer linking to existing documentation.
 - Update durable documentation when behavior changes.
 - Do not append session histories to instruction files.
+
+## Visual communication
+I understand faster from pictures than prose. Use a visual when it makes something clearer than text would; otherwise don't.
+
+- Answer in the first line, then the visual, then 1–3 sentences on what it shows and its caveats. Don't narrate the visual.
+- Pick the form by content: flows, architecture, state, decisions → diagram; comparisons and numeric summaries → table; distributions, time series, relationships, sensitivity → plot; parameter exploration → interactive page.
+- Match the medium to where it's read:
+  - Terminal chat: Markdown tables and small box-drawing diagrams. Mermaid shows as raw source there; don't use it in chat.
+  - Files (docs, READMEs, PRs, notebooks): Mermaid for diagrams, matplotlib/plotly for plots.
+  - Interactive: use an artifact/HTML publishing tool if one is available; otherwise write a self-contained HTML file and give me its path.
+- Use the lightest visual that works (table < chart < interactive). No decorative or redundant visuals, none for short factual answers.
+- Plots: title, axis labels with units, legend when >1 series, appropriate scales (log where relevant).
+- For nontrivial algorithms or designs, show the overall flow before implementation details.

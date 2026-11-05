@@ -42,9 +42,12 @@ link "$REPO/tmux/tmux.conf"    "$HOME/.tmux.conf"
 # XDG configs
 link "$REPO/nvim"              "$HOME/.config/nvim"
 
+# Global agent instructions: one file shared by Claude Code and Codex
+link "$REPO/ai/GLOBAL.md" "$HOME/.claude/CLAUDE.md"
+link "$REPO/ai/GLOBAL.md" "$HOME/.codex/AGENTS.md"
+
 # Claude Code (user-level config; runtime state stays in ~/.claude)
 link "$REPO/claude/settings.json"         "$HOME/.claude/settings.json"
-link "$REPO/claude/CLAUDE.md"             "$HOME/.claude/CLAUDE.md"
 link "$REPO/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 for skill in "$REPO"/claude/skills/*/; do
   link "${skill%/}" "$HOME/.claude/skills/$(basename "$skill")"
